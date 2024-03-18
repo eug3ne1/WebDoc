@@ -1,0 +1,209 @@
+body {
+    background-color: #ffffff;
+  }
+
+  .offers{
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    background-color:rgba(242, 242, 242, 1);
+    width: 1600px;
+    height: 400px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    overflow-x: auto; 
+    white-space: nowrap;   
+
+}
+
+.tesla-main:hover, .audi-main:hover,.toyota-main:hover, .passat-main:hover, .ford-main:hover{
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+  
+  h3 {
+    margin: 0;
+    padding: 0;
+  }
+  
+  a:active,
+  a:focus,
+  a:hover {
+    color: black;
+    background-color: rgb(156, 156, 156);
+  }
+  
+  .title {
+    border: black 1px solid;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .title p:first-child {
+    text-transform: uppercase;
+  }
+  
+  .title p {
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+  }
+  
+  .title span {
+    text-decoration: underline;
+  }
+  
+  .kpi {
+    height: 70px;
+    width: 70px;
+  }
+  
+  .title-text {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .labs {
+    border: black 1px solid;
+    border-radius: 5px;
+    display: flex;
+    padding: 5px;
+    justify-content: space-around;
+    flex-basis: auto;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    padding: 15px 0;
+    margin-bottom: 10px;
+  }
+  
+  .labs-content {
+    display: flex;
+  }
+  
+  .lab {
+    border: black 2px solid;
+    border-radius: 10px;
+    padding: 0 60px;
+    height: 30px;
+    text-align: center;
+  }
+  
+  .list {
+    border: black 1px solid;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    padding: 15px 15px;
+    max-width: 400px;
+    max-height: 600px;
+    width: 100%;
+    margin-right: 15px;
+  }
+  
+  .list-item {
+    border: black 1px solid;
+    border-radius: 5px;
+    flex: 2 1 auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+  }
+  
+  .list-item:not(:last-child) {
+    margin-bottom: 15px;
+  }
+  
+  .list-content {
+    border: black 1px solid;
+    border-radius: 5px;
+    flex-grow: 1;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    height: 500px;
+    padding: 10px 15px 0 15px;
+  }
+  
+  .list-content h3 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    text-align: center;
+  }
+  
+  .list-content h3:first-child {
+    margin-bottom: 10px;
+  }
+  
+  .list-content p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    margin-left: 15px;
+  }
+  
+  .list-content a:hover,
+  a:focus,
+  a:active {
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  
+  .git {
+    text-decoration: underline;
+  }
+  
+  .list-content li:not(:last-child) {
+    margin-bottom: 15px;
+  }
+  
+  .list-content ul:not(:last-child) {
+    margin-bottom: 15px;
+  }
+  
+  .list-content .elements {
+    text-align: center;
+  }
+  
+  td:not(:last-child) {
+    width: 15%;
+  }
+  
+  #id {
+    border-collapse: collapse;
+    border: 1px solid black;
+    border-radius: 5px;
+  }
+  
+  th,
+  td {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px 0 5px 5px;
+  }
+  
+  td:first-child {
+    text-align: center;
+  }
+  
+  .face-photo {
+    height: 100px;
+    width: 80px;
+    margin-right: 40px;
+  }
+  
+  .tags {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    list-style-type: none;
+  }
+  
+  #selectors {
+    margin-bottom: 0;
+  }

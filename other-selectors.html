@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="title">
+      <img class="kpi" src="images/kpi-symbol.png" alt="" />
+      <div class="title-text">
+        <p>
+          звіти з лабораторних робіт <br />
+          з дисципліни "інтернет-технології та проектування web-застосувань"
+        </p>
+        <p>Студента групи ІО-13 <span>Міхолата Євгена Олеговича</span></p>
+      </div>
+    </header>
+    <main>
+      <div class="labs">
+        <a href="1lab.html" class="lab">Лаба №1</a>
+        <a href="2lab.html" class="lab">Лаба №2</a>
+        <a href="#" class="lab">Лаба №3</a>
+        <a href="#" class="lab">Лаба №4</a>
+        <a href="#" class="lab">Лаба №5</a>
+        <a href="#" class="lab">Лаба №6</a>
+        <a href="#" class="lab">Лаба №7</a>
+        <a href="#" class="lab">Лаба №8</a>
+        <a href="#" class="lab">Лаба №9</a>
+      </div>
+      <div class="labs-content">
+        <div class="list">
+          <a href="2lab.html" class="list-item"
+            >Тема, мета, місце розташування лаби</a
+          >
+          <a href="style-conection.html" class="list-item"
+            >Способи підключення стилів</a
+          >
+          <a href="" class="list-item" id="selectors">Селектори</a>
+          <ul class="tags">
+            <li><a href="selectors.html" class="list-item">Селекори тегу</a></li>
+            <li><a href="selcetors-class.html" class="list-item">Селектори класів</a></li>
+            <li>
+              <a href="selector-id.html" class="list-item"
+                >Селектори ідентифікаторів</a
+              >
+            </li>
+            <li>
+              <a href="other-selectors.html" class="list-item">Інші селектори</a>
+            </li>
+          </ul>
+          <a href="others.html" class="list-item"
+            >CSS: Шрифти Текст Таблиці Фон Контур Списки СSS Просунутий</a
+          >
+          <a href="conclusions.html" class="list-item">Висновки</a>
+        </div>
+        <div style="overflow-y: auto;" class="list-content">
+          <h3>
+            Інші використані селектори
+          </h3>
+
+          <h4>1. Дочірні селектори</h4>
+          <p>Дочірній селектор у CSS дозволяє вибирати елементи, які є прямими дочірніми елементами вказаного батьківського елемента. 
+            Це означає, що обраний елемент повинен бути безпосередньо вкладений всередину батьківського елемента. </p>
+
+          <p>Приклад використання селектору класу в проекті "Доставка авто з США" :</p>
+
+            <img style="display: block; margin-bottom: 10px;" src="images/others2.PNG" alt="id3">
+            <p>Відображення на готовій сторінці:</p>
+            <img src="images/others3.PNG" alt="id1">
+
+
+            
+
+            <h4>2. Селектори псевдокласів</h4>
+            <p>Ці селектори вибирають елементи на основі їхнього стану або певних умов. Наприклад, :hover вибере елемент при наведенні на нього курсора миші.</p>
+            <img src="images/others1.PNG" alt="id2">
+
+            <p>Відображення на готовій сторінці:</p>
+
+            <div style="margin-top: 30px; width: 1400px;" class="offers">
+        
+
+
+                <div class="audi-main" style="border: solid; margin-left: 10px;">
+                    <img id="audi_png" src="images/audi.PNG" width="300" 
+                    height="180" alt="Audi A4"></img>
+                    <div class="text-audi"> 
+                        <h2>Audi A4</h2>
+                        <h3>7500 $</h3>
+                        <h4>205 000 km                  2.0 </h4>
+                        <h4>   2016                        Дизель </h4>
+                    </div>
+                    
+        
+                    
+                </div>
+        
+                <div class="tesla-main" style="border: solid; margin-left: 10px;">
+                    <img id="tesla_png" src="images/tesla.PNG"  width="300" 
+                    height="180" alt="Tesla"></img>
+                    <div class="text-tesla"> <h2>Tesla model 3</h2>
+                        <h3>14 000 $</h3>
+                        <h4>105 000 km            Електро</h4>
+                        <h4>2019 </h4>
+                    </div>
+                    
+        
+                    
+                </div>
+        
+        
+                <div class="toyota-main" style="border: solid; margin-left: 10px;">
+                    <img id="prius_png" src="images/prius.PNG" width="300" 
+                    height="180" style="margin: 0%;" alt="Toyota Prius"></img>
+                    <div class="text-toyota"><h2>Toyota Prius</h2>
+                        <h3>11 000 $</h3>
+                        <h4>45 000 km              1.8 </h4>
+                        <h4>    2020                   Бензин </h4>
+                     </div>
+                    
+        
+                    
+                </div>
+            
+
+
+            
+
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
