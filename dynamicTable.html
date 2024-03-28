@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+    
+    table {
+        width: 100%; 
+        border-collapse: collapse;
+        font-weight: bold;
+        font-size: 25px;
+    }
+    th, td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: center;
+        
+    }
+
+    #head{
+        height: 30px;
+        background-color:  rgb(255, 255, 109);
+        text-align: right;
+        padding-right: 50px;
+    }
+
+    .table2{
+        height: 10px;
+        width: 18%;
+        background-color: aliceblue;
+        
+        
+    }
+
+    #footer{
+        background-color: rgb(255, 255, 109);
+        text-align: left;
+        padding-left: 40px;
+        height: 30px;
+    }
+    #main{
+        height: 700px;
+    }
+
+    #red1,#red2{
+        width: 25%;
+        background-color: rgb(247, 86, 86);
+        
+    }
+    #white{
+        width: 25%;
+    }
+    #blue{
+        width: 25%;
+        background-color: rgb(67, 67, 170);
+    }
+    </style>
+  </head>
+  <body>
+    <header class="title">
+      <img class="kpi" src="images/kpi-symbol.png" alt="" />
+      <div class="title-text">
+        <p>
+          звіти з лабораторних робіт <br />
+          з дисципліни "web-орієнтовані технології. основи frontend та backend
+          розробок"
+        </p>
+        <p>Студента групи ІО-13 <span>Міхолата Євгена Олеговича</span></p>
+      </div>
+    </header>
+    <main>
+      <div class="labs">
+        <a href="1lab.html" class="lab">Лаба №1</a>
+        <a href="2lab.html" class="lab">Лаба №2</a>
+        <a href="3lab.html" class="lab">Лаба №3</a>
+        <a href="#" class="lab">Лаба №4</a>
+        <a href="#" class="lab">Лаба №5</a>
+        <a href="#" class="lab">Лаба №6</a>
+        <a href="#" class="lab">Лаба №7</a>
+        <a href="#" class="lab">Лаба №8</a>
+        <a href="#" class="lab">Лаба №9</a>
+      </div>
+      <div class="labs-content">
+        <div class="list">
+          <a href="2lab.html" class="list-item"
+            >Тема, мета, місце розташування лаби</a
+          >
+          <a style="display: block; text-align: center;" href="page.html" class="list-item"
+            ><p>ЗАВДАННЯ № 1 .</p>Зовнішній вигляд макету. Код макету.</a
+          >
+          <a href="page.html" class="list-item" id="selectors">ЗАВДАННЯ № 2</a>
+          <ul class="tags">
+            <li><a href="fixTable.html" class="list-item">Фіксована таблична верстка.</a></li>
+            <li><a href="dynamicTable" class="list-item">Гумова таблична верстка.</a></li>
+            <li>
+              <a href="fixedBlock.html" class="list-item"
+                >Фіксована блокова верстка</a
+              >
+            </li>
+            <li>
+              <a href="dynamicBlock.html" class="list-item">Гумова блокова верстка</a>
+            </li>
+          </ul>
+          <a href="others.html" class="list-item"
+            >ЗАВДАННЯ № 3. <p>FLEXBOX</p></a
+          >
+          <ul class="tags">
+            <li><a href="layout3.html" class="list-item">Зовнішній вигляд сторінки</a></li>
+            <li><a href="flexbox1.html" class="list-item">HTML - код </a></li>
+            <li>
+              <a href="flexbox2.html" class="list-item"
+                >СSS - код</a
+              >
+            </li>
+          </ul>
+          <a href="conclusions3.html" class="list-item">Висновки</a>
+        </div>
+        <div style="height: 2500px;" class="list-content">
+          <h3>Гумова таблична верстка</h3>
+
+            <table>
+                <thead>
+                   <tr>
+                    <th id="head" colspan="4" > 
+                        <table class="table2">
+                            <tr >
+                                <td ></td>
+                                1
+                            </tr>
+                        </table></th>
+                   </tr>
+                </thead>
+                <tbody>
+                    <tr id="main">
+                        <td id="blue">2</td>
+                        <td id="red1">3</td>
+                        <td id="white">4</td>
+                        <td id="red2">5</td>
+                    </tr>
+                    <tr>
+                        <td id="footer" colspan="4" >6</td>
+                        
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p>CSS - код сторінки</p>
+            <div style="display: block;">
+
+                
+                <img src="images/code13.PNG" alt="">
+                <p>HTML - код сторінки</p>
+                <img style="display: block;" src="images/code10.PNG" alt="">
+                
+         
+
+
+            </div>
+            
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

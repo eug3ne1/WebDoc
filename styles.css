@@ -108,7 +108,7 @@ body {
   
   .list-item {
     border: black 1px solid;
-    border-radius: 5px;
+    border-radius: 20px;
     flex: 2 1 auto;
     justify-content: center;
     align-items: center;
