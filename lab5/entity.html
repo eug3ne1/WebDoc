@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+        .calendar {
+            font-family: Arial, sans-serif;
+            max-width: 300px;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+        .calendar-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .calendar-header select {
+            padding: 5px;
+            font-size: 16px;
+        }
+        .calendar-body {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+        }
+        .calendar-day {
+            padding: 5px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .calendar-day:hover {
+            background-color: #f0f0f0;
+        }
+        .today {
+            background-color: #f2f2f2;
+        }
+    </style>
+  </head>
+  <body>
+    <header class="title">
+      <img class="kpi" src="../images/kpi-symbol.png" alt="" />
+      <div class="title-text">
+        <p>
+          звіти з лабораторних робіт <br />
+          з дисципліни "web-орієнтовані технології. основи frontend та backend
+          розробок"
+        </p>
+        <p>Студента групи ІО-13 <span>Міхолата Євгена Олеговича</span></p>
+      </div>
+
+      <img
+        class="face-photo" style="height: 100px; width: 80px; margin-right: 40px;"
+        src="../images/photo.PNG"
+        alt=""
+      />
+    </header>
+    <main>
+      <div class="labs">
+        <a href="../1lab.html" class="lab">Лаба №1</a>
+        <a href="2lab.html" class="lab">Лаба №2</a>
+        <a href="3lab.html" class="lab">Лаба №3</a>
+        <a href="4lab.html" class="lab">Лаба №4</a>
+        <a href="5lab.html" class="lab">Лаба №5</a>
+        <a href="#" class="lab">Лаба №6</a>
+        <a href="#" class="lab">Лаба №7</a>
+        <a href="#" class="lab">Лаба №8</a>
+        <a href="#" class="lab">Лаба №9</a>
+      </div>
+      <div class="labs-content">
+        <div class="list">
+          <a href="5lab.html" class="list-item"
+            >Тема, мета, місце розташування лаби</a
+          >
+         
+          <a href="" class="list-item" id="selectors" style="text-align: center;">Способи функціонального застосування JAVASCRIPT</a>
+          <ul class="tags">
+            <li><a href="url.html" class="list-item">Схема URL</a></li>
+            <li><a href="event.html" class="list-item">Обробник подій</a></li>
+            <li>
+              <a href="fixedBlock.html" class="list-item"
+                >Підстановка (Entity) </a
+              >
+            </li>
+            <li>
+              <a href="tag.html" class="list-item">Вставка (тег SCRIPT)</a>
+            </li>
+          </ul>
+          <a href="arrays.html" class="list-item">Пункт 4. Масиви </a>
+          <a href="cal.html" class="list-item">Пункт 6 </a>
+        
+          <a href="conclusions5.html" class="list-item">Висновки</a>
+        </div>
+        <div class="list-content"  style="overflow-y: auto;">
+           <h2>Підстановка</h2>
+           <p>У JavaScript термін "підстановка" (interpolation) часто використовується для опису інтерполяції значень змінних або виразів в рядки. Це означає вставку значення змінної або виразу в рядок. Найпоширеніше використання підстановки - це у шаблонах рядків (template strings) та в рядках, що генеруються динамічно.
+
+            В якості прикладу, розглянемо, як використовувати підстановку в шаблонах рядків:</p>
+
+            <img src="../images/entity.PNG" alt="">
+
+            <p>
+                Приклад з завдання 6, підставляємо значення day та month
+            </p>
+
+            <img src="../images/entity2.PNG" alt="">
+
+
+          
+
+
+
+
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

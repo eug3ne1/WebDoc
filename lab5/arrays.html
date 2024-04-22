@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="title">
+      <img class="kpi" src="../images/kpi-symbol.png" alt="" />
+      <div class="title-text">
+        <p>
+          звіти з лабораторних робіт <br />
+          з дисципліни "web-орієнтовані технології. основи frontend та backend
+          розробок"
+        </p>
+        <p>Студента групи ІО-13 <span>Міхолата Євгена Олеговича</span></p>
+      </div>
+
+      <img
+        class="face-photo" style="height: 100px; width: 80px; margin-right: 40px;"
+        src="../images/photo.PNG"
+        alt=""
+      />
+    </header>
+    <main>
+      <div class="labs">
+        <a href="../1lab.html" class="lab">Лаба №1</a>
+        <a href="2lab.html" class="lab">Лаба №2</a>
+        <a href="3lab.html" class="lab">Лаба №3</a>
+        <a href="4lab.html" class="lab">Лаба №4</a>
+        <a href="5lab.html" class="lab">Лаба №5</a>
+        <a href="#" class="lab">Лаба №6</a>
+        <a href="#" class="lab">Лаба №7</a>
+        <a href="#" class="lab">Лаба №8</a>
+        <a href="#" class="lab">Лаба №9</a>
+      </div>
+      <div class="labs-content">
+        <div class="list">
+          <a href="5lab.html" class="list-item"
+            >Тема, мета, місце розташування лаби</a
+          >
+         
+          <a href="selectors.html" class="list-item" id="selectors" style="text-align: center;">Способи функціонального застосування JAVASCRIPT</a>
+          <ul class="tags">
+            <li><a href="url.html" class="list-item">Схема URL</a></li>
+            <li><a href="event.html" class="list-item">Обробник подій</a></li>
+            <li>
+              <a href="entity.html" class="list-item"
+                >Підстановка (Entity) </a
+              >
+            </li>
+            <li>
+              <a href="tag.html" class="list-item">Вставка (тег SCRIPT)</a>
+            </li>
+          </ul>
+          <a href="arrays.html" class="list-item">Пункт 4. Масиви </a>
+          <a href="cal.html" class="list-item">Пункт 6 </a>
+        
+          <a href="conclusions3.html" class="list-item">Висновки</a>
+        </div>
+        <div class="list-content"  style="overflow-y: auto;">
+            <h2>Масив</h2>
+            <form id="arrayForm">
+                <label for="arrayLength">Введіть кількість елементів масиву:</label>
+                <input type="number" id="arrayLength" required>
+                <button type="submit">Створити масив</button>
+            </form>
+            
+            <div id="result" style="display: none;">
+                <h3>Результати:</h3>
+                <p id="startArray"></p>
+                <p id="minMaxSum"></p>
+                <p id="sortedArray"></p>
+            </div>
+
+            <p>HTML код :</p>
+            <img src="../images/arrays1.PNG"style="display: block;" alt="">
+            <p>JS - код :</p>
+            <img src="../images/arrays2.PNG"style="display: block;" alt="">
+            <img src="../images/arrays3.PNG"style="display: block;" alt="">
+            
+            <script>
+            // Функція для обчислення суми елементів між максимальним та мінімальним значеннями масиву
+            function calculateSumMinMax(array) {
+                let max = Math.max(...array);
+                let min = Math.min(...array);
+               
+                return max+min;
+            }
+            
+            // Функція для швидкого сортування масиву
+            function quickSort(array) {
+                if (array.length <= 1) {
+                    return array;
+                }
+            
+                const pivot = array[0];
+                const left = [];
+                const right = [];
+            
+                for (let i = 1; i < array.length; i++) {
+                    if (array[i] < pivot) {
+                        left.push(array[i]);
+                    } else {
+                        right.push(array[i]);
+                    }
+                }
+            
+                return quickSort(left).concat(pivot, quickSort(right));
+            }
+            
+            document.getElementById("arrayForm").addEventListener("submit", function(event) {
+                event.preventDefault();
+                const length = parseInt(document.getElementById("arrayLength").value);
+                let array = [];
+                for (let i = 0; i < length; i++) {
+                    array.push(Math.floor(Math.random() * 100) + 1);
+                }
+                const minMaxSum = calculateSumMinMax(array);
+                const sortedArray = quickSort(array);
+                let min = Math.min(...sortedArray);
+                let max = Math.max(...sortedArray);
+                document.getElementById("startArray").textContent = `Початковий масив : ${array}`
+                document.getElementById("minMaxSum").textContent = `Сума елементів між максимальним (${max}) та мінімальним значеннями (${min}): ${minMaxSum}`;
+                document.getElementById("sortedArray").textContent = `Відсортований масив: ${sortedArray.join(", ")}`;
+                document.getElementById("result").style.display = "block";
+            });
+            </script>
+
+
+
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
