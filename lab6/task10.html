@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+        #boxes {
+          display: flex;
+          flex-wrap: wrap;
+        }
+        .box {
+          width: 30px;
+          height: 30px;
+          margin: 5px;
+          background-color: #000;
+        }
+      </style>
+  </head>
+  <body>
+    <header class="title">
+      <img class="kpi" src="../images/kpi-symbol.png" alt="" />
+      <div class="title-text">
+        <p>
+          звіти з лабораторних робіт <br />
+          з дисципліни "web-орієнтовані технології. основи frontend та backend
+          розробок"
+        </p>
+        <p>Студента групи ІО-13 <span>Міхолата Євгена Олеговича</span></p>
+      </div>
+
+      <img
+        class="face-photo" style="height: 100px; width: 80px; margin-right: 40px;"
+        src="../images/photo.PNG"
+        alt=""
+      />
+    </header>
+    <main>
+      <div class="labs">
+        <a href="../lab1/1lab.html" class="lab">Лаба №1</a>
+        <a href="../lab2/2lab.html" class="lab">Лаба №2</a>
+        <a href="../lab3/3lab.html" class="lab">Лаба №3</a>
+        <a href="../lab4/4lab.html" class="lab">Лаба №4</a>
+        <a href="../lab5/5lab.html" class="lab">Лаба №5</a>
+        <a href="6lab.html" class="lab">Лаба №6</a>
+        <a href="#" class="lab">Лаба №7</a>
+        <a href="#" class="lab">Лаба №8</a>
+        <a href="#" class="lab">Лаба №9</a>
+      </div>
+      <div class="labs-content">
+        <div class="list">
+          <a href="6lab.html" class="list-item"
+            >Тема, мета, місце розташування лаби</a>
+          <a href="task2.html" class="list-item">Завдання 2 </a>
+          <a href="task4.html" class="list-item">Завдання 4 </a>
+          <a href="task6.html" class="list-item">Завдання 6 </a>
+          <a href="task8.html" class="list-item">Завдання 8 </a>
+          <a href="task10.html" class="list-item">Завдання 10 </a>
+        
+          <a href="conclusions6.html" class="list-item">Висновки</a>
+        </div>
+        <div class="list-content" style="overflow-y: auto; overflow-x: auto;" >
+
+            <div id="controls">
+                <input type="number" min="1" max="100" step="1" />
+                <button type="button" data-create>Create</button>
+                <button type="button" data-destroy>Destroy</button>
+              </div>
+            
+              <div id="boxes"></div>
+
+
+
+              <p>HTML - код </p>
+              <img src="../images/lab6-task10.PNG" alt="" style="display: block;">
+              <img src="../images/lab6-task10(2).PNG" alt="">
+
+
+
+            
+              <script>
+                // Функція для генерації випадкового кольору в HEX форматі
+                function getRandomHexColor() {
+                  return `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0')}`;
+                }
+            
+                   // Отримуємо кнопки та інпут
+                const createBtn = document.querySelector('[data-create]');
+                const destroyBtn = document.querySelector('[data-destroy]');
+                const input = document.querySelector('input');
+            
+                // Обробник події для кнопки Create
+                createBtn.addEventListener('click', () => {
+                  const amount = parseInt(input.value); // Отримання кількості
+                  if (amount > 0 && amount <= 100) { // Перевірка на валідність
+                    createBoxes(amount); // Створення колекції
+                    input.value = ''; // Очищення інпуту
+                  } else {
+                    alert('Please enter a number between 1 and 100.');
+                  }
+                });
+            
+                // Функція для створення колекції елементів
+                function createBoxes(amount) {
+                  const boxesContainer = document.getElementById('boxes');
+                  for (let i = 0; i < amount; i++) {
+                    const box = document.createElement('div');
+                    box.classList.add('box');
+                    box.style.width = `${30 + i * 10}px`; // Зміна ширини
+                    box.style.height = `${30 + i * 10}px`; // Зміна висоти
+                    box.style.backgroundColor = getRandomHexColor(); // Випадковий колір
+                    boxesContainer.appendChild(box);
+                  }
+                }
+            
+                // Функція для очищення колекції елементів
+                function destroyBoxes() {
+                  const boxesContainer = document.getElementById('boxes');
+                  boxesContainer.innerHTML = ''; // Очищення вмісту
+                }
+            
+             
+            
+                // Обробник події для кнопки Destroy
+                destroyBtn.addEventListener('click', () => {
+                  destroyBoxes(); // Очищення колекції
+                });
+              </script>
+
+
+          
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

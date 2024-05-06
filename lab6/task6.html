@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="title">
+      <img class="kpi" src="../images/kpi-symbol.png" alt="" />
+      <div class="title-text">
+        <p>
+          звіти з лабораторних робіт <br />
+          з дисципліни "web-орієнтовані технології. основи frontend та backend
+          розробок"
+        </p>
+        <p>Студента групи ІО-13 <span>Міхолата Євгена Олеговича</span></p>
+      </div>
+
+      <img
+        class="face-photo" style="height: 100px; width: 80px; margin-right: 40px;"
+        src="../images/photo.PNG"
+        alt=""
+      />
+    </header>
+    <main>
+      <div class="labs">
+        <a href="../lab1/1lab.html" class="lab">Лаба №1</a>
+        <a href="../lab2/2lab.html" class="lab">Лаба №2</a>
+        <a href="../lab3/3lab.html" class="lab">Лаба №3</a>
+        <a href="../lab4/4lab.html" class="lab">Лаба №4</a>
+        <a href="../lab5/5lab.html" class="lab">Лаба №5</a>
+        <a href="6lab.html" class="lab">Лаба №6</a>
+        <a href="#" class="lab">Лаба №7</a>
+        <a href="#" class="lab">Лаба №8</a>
+        <a href="#" class="lab">Лаба №9</a>
+      </div>
+      <div class="labs-content">
+        <div class="list">
+          <a href="6lab.html" class="list-item"
+            >Тема, мета, місце розташування лаби</a>
+          <a href="task2.html" class="list-item">Завдання 2 </a>
+          <a href="task4.html" class="list-item">Завдання 4 </a>
+          <a href="task6.html" class="list-item">Завдання 6 </a>
+          <a href="task8.html" class="list-item">Завдання 8 </a>
+          <a href="task10.html" class="list-item">Завдання 10 </a>
+        
+          <a href="conclusions6.html" class="list-item">Висновки</a>
+        </div>
+        <div class="list-content" style="overflow-y: auto;">
+
+
+            <div style="background-color: rgb(122, 185, 122); width: 300px; height: 330px; display: block; ">
+                <h2 style="color: rgb(0, 0, 0);">Завдання 6</h2>
+                <ul>
+                    <li>1</li>
+                    <li>4</li>
+                    <li>8</li>
+                    <li>16</li>
+                    <li>20</li>
+                    <li>30</li>
+                </ul>
+                
+                
+                <button onclick="doubleInt()">Збільшити вдвічі</button>
+                <button onclick="resetValues()">Очистити</button>
+            
+        
+            </div>
+            
+            <p>HTML - код </p>
+            <img src="../images/lab6-task6.PNG" alt="" style="display: block;">
+            <img src="../images/lab6-task6(2).PNG" alt="">
+
+
+           
+        
+        
+            
+         
+            <script>
+        
+                let originalValues = []; // Масив для зберігання початкових значень
+        
+                // Отримуємо початкові значення і зберігаємо їх у масиві
+                let elements = document.getElementsByTagName("li");
+                for (let element of elements){
+                    originalValues.push(parseInt(element.textContent));
+                }
+        
+                function doubleInt(){
+                    let elements = document.getElementsByTagName("li");
+                    for (let element of elements){
+                        var currentNumber = parseInt(element.textContent);
+                        element.textContent = currentNumber ** 2;
+                    } 
+                }
+        
+                function resetValues() {
+                    let elements = document.getElementsByTagName("li");
+                    for (let i = 0; i < elements.length; i++) {
+                        elements[i].textContent = originalValues[i]; // Відновлюємо початкові значення
+                    }
+                }
+               
+            </script>
+
+         
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
