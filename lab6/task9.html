@@ -11,23 +11,6 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-
-    <style>
-        #square {
-            width: 30px;
-            height: 30px;
-            background-color: rgb(122, 185, 122);
-            margin-bottom: 20px;
-            border: 2px dashed rgb(201, 28, 28);
-            margin-left: 30px;
-        }
-        
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            margin-right: 10px;
-        }
-    </style>
   </head>
   <body>
     <header class="title">
@@ -70,58 +53,39 @@
             <a href="task8.html" class="list-item">Завдання 8 </a>
             <a href="task9.html" class="list-item">Завдання 9 </a>
             <a href="task10.html" class="list-item">Завдання 10 </a>
-        
           <a href="conclusions6.html" class="list-item">Висновки</a>
         </div>
         <div class="list-content" style="overflow-y: auto;">
-            
-            
-            <div style="background-color: rgb(122, 185, 122); width: 300px; height: 200px; text-align: center;">
-                <h2 style="color: rgb(226, 99, 99);">Завдання 4</h2>
-                <p>Результат:</p>
-                <div id="square"></div>
-                <button onclick="decreaseSize()">Зменшити</button>
-                <button onclick="increaseSize()">Збільшити</button>
-            
-        
-            </div>
 
-            <p>HTML - код </p>
-            <img src="../images/lab6-task4.PNG" alt="" style="display: block;">
-            <img src="../images/lab6-task4(2).PNG" alt="">
-        
-            
-            
-            
-            
-            <script>
-                var square = document.getElementById("square");
-                var currentSize = 30;
-        
-                function decreaseSize() {
-                    currentSize -= 15;
-                    if (currentSize >= 15) {
-                        square.style.width = currentSize + "px";
-                        square.style.height = currentSize + "px";
-                    } else {
-                        alert("Квадрат вже мінімального розміру!");
-                        currentSize += 15;
-                    }
-                }
-        
-                function increaseSize() {
-                    currentSize += 15;
-                    if (currentSize <= 45) {
-                        square.style.width = currentSize + "px";
-                        square.style.height = currentSize + "px";
-                    } else {
-                        alert("Квадрат досяг максимального розміру!");
-                        currentSize -= 15;
-                    }
-                }
-            </script>
-          
+            <div class="widget">
+                <p>Background color: <span class="color">-</span></p>
+                <button type="button" class="change-color">Change color</button>
+              </div>
         </div>
+
+        <script>
+            // Функція для генерації випадкового кольору у hex-форматі
+            function getRandomHexColor() {
+            return `#${Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0')}`;
+            }
+
+            // Отримуємо посилання на кнопку та елемент span
+            const button = document.querySelector('.change-color');
+            const span = document.querySelector('.color');
+
+            // Додаємо обробник події на клік по кнопці
+            button.addEventListener('click', function() {
+            // Генеруємо випадковий колір
+            const randomColor = getRandomHexColor();
+
+            // Змінюємо колір фону елемента <body>
+            document.body.style.backgroundColor = randomColor;
+
+            // Встановлюємо випадковий колір у текстове вмістення елемента span
+            span.textContent = randomColor;
+            });
+        </script>
+
       </div>
     </main>
   </body>

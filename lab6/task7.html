@@ -11,23 +11,6 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-
-    <style>
-        #square {
-            width: 30px;
-            height: 30px;
-            background-color: rgb(122, 185, 122);
-            margin-bottom: 20px;
-            border: 2px dashed rgb(201, 28, 28);
-            margin-left: 30px;
-        }
-        
-        button {
-            padding: 10px 20px;
-            font-size: 16px;
-            margin-right: 10px;
-        }
-    </style>
   </head>
   <body>
     <header class="title">
@@ -70,56 +53,73 @@
             <a href="task8.html" class="list-item">Завдання 8 </a>
             <a href="task9.html" class="list-item">Завдання 9 </a>
             <a href="task10.html" class="list-item">Завдання 10 </a>
-        
           <a href="conclusions6.html" class="list-item">Висновки</a>
         </div>
         <div class="list-content" style="overflow-y: auto;">
-            
-            
-            <div style="background-color: rgb(122, 185, 122); width: 300px; height: 200px; text-align: center;">
-                <h2 style="color: rgb(226, 99, 99);">Завдання 4</h2>
-                <p>Результат:</p>
-                <div id="square"></div>
-                <button onclick="decreaseSize()">Зменшити</button>
-                <button onclick="increaseSize()">Збільшити</button>
-            
-        
-            </div>
 
-            <p>HTML - код </p>
-            <img src="../images/lab6-task4.PNG" alt="" style="display: block;">
-            <img src="../images/lab6-task4(2).PNG" alt="">
-        
-            
-            
-            
-            
-            <script>
-                var square = document.getElementById("square");
-                var currentSize = 30;
-        
-                function decreaseSize() {
-                    currentSize -= 15;
-                    if (currentSize >= 15) {
-                        square.style.width = currentSize + "px";
-                        square.style.height = currentSize + "px";
-                    } else {
-                        alert("Квадрат вже мінімального розміру!");
-                        currentSize += 15;
-                    }
+
+            <ul id="categories" style="font-size: 12px;">
+                <li class="item">
+                  <h2>Animals</h2>
+                  <ul>
+                    <li>Cat</li>
+                    <li>Hamster</li>
+                    <li>Horse</li>
+                    <li>Parrot</li>
+                  </ul>
+                </li>
+                <li class="item">
+                  <h2>Products</h2>
+                  <ul>
+                    <li>Bread</li>
+                    <li>Prasley</li>
+                    <li>Cheese</li>
+                  </ul>
+                </li>
+                <li class="item">
+                  <h2>Technologies</h2>
+                  <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>React</li>
+                    <li>Node.js</li>
+                  </ul>
+                </li>
+              </ul>
+
+              <button onclick="task()">Вивести в консоль</button>
+
+
+              <script>
+                function task (){
+                    
+                    // Отримуємо посилання на список категорій
+                    const categoriesList = document.getElementById('categories');
+
+                    // Отримуємо всі елементи li.item у списку категорій
+                    const categories = categoriesList.querySelectorAll('li.item');
+
+                    // 1. Порахуємо кількість категорій
+                    console.log('Кількість категорій:', categories.length);
+
+                    // 2. Виведемо інформацію про кожну категорію
+                    categories.forEach(category => {
+                        // Отримуємо текст заголовку категорії (тег <h2>)
+                        const categoryName = category.querySelector('h2').textContent;
+
+                        // Отримуємо всі елементи списку вкладених у категорію
+                        const categoryItems = category.querySelectorAll('ul > li');
+
+                        // Виводимо інформацію про категорію
+                        console.log(`Категорія: ${categoryName}`);
+                        console.log(`Кількість елементів: ${categoryItems.length}`);
+                    });
                 }
-        
-                function increaseSize() {
-                    currentSize += 15;
-                    if (currentSize <= 45) {
-                        square.style.width = currentSize + "px";
-                        square.style.height = currentSize + "px";
-                    } else {
-                        alert("Квадрат досяг максимального розміру!");
-                        currentSize -= 15;
-                    }
-                }
-            </script>
+
+              </script>
+              
+           
           
         </div>
       </div>
