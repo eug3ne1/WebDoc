@@ -3,12 +3,16 @@ let formData = {
     email: "",
     message: ""
   };
+
+  form = document.querySelector('.feedback-form')
   
-  // Функція збереження formData в локальне сховище
+
   function saveToLocalStorage() {
     localStorage.setItem('feedback-form-state', JSON.stringify(formData));
   }
-  // Функція  завантаження даних з локального сховища
+
+
+
   function loadFromLocalStorage() {
     const savedData = localStorage.getItem('feedback-form-state');
     if (savedData) {
@@ -19,12 +23,10 @@ let formData = {
   }
   
 
-  form = document.querySelector('.feedback-form')
-
   // якщо перезавантаження сторінки - перевірити сховище 
   window.addEventListener('load', loadFromLocalStorage);
 
-  // обробник події input для форми
+  // обробник події input 
   form.addEventListener('input', event => {
     if (event.target.name === 'email') {
       formData.email = event.target.value.trim();
@@ -35,9 +37,8 @@ let formData = {
   });
   
 
-  //  обробник події submit для форми
+  //  обробник події submit 
   form.addEventListener('submit', event => {
-    event.preventDefault();
   
     if (!formData.message || !formData.email  ) {
       alert('Fill please all fields');
