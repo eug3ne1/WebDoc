@@ -39,6 +39,7 @@ let formData = {
 
   //  обробник події submit 
   form.addEventListener('submit', event => {
+    event.preventDefault();
   
     if (!formData.message || !formData.email  ) {
       alert('Fill please all fields');
